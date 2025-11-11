@@ -160,7 +160,7 @@ plt.show()
 
 ```{python}
 #| label: bivariate-stresssurvey-regression
-#| echo: true
+#| echo: false
 import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -193,7 +193,7 @@ print(model_sm.summary())
 
 ```{python}
 #| label: compare-true-relationship
-#| echo: true
+#| echo: false
 # Compare estimated coefficients to true relationship
 print("=" * 60)
 print("Comparison with True Relationship")
@@ -249,7 +249,7 @@ This illustrates a key problem: even when we have a "good" proxy variable (Stres
 ```{python}
 #| label: fig-stresssurvey-anxiety-scatter
 #| fig-cap: "Scatter plot of Anxiety vs StressSurvey with regression line"
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -291,7 +291,7 @@ plt.show()
 
 ```{python}
 #| label: analyze-residuals-stresssurvey
-#| echo: true
+#| echo: false
 import pandas as pd
 
 # Analyze residuals to check for patterns
@@ -342,7 +342,7 @@ While the regression appears to fit well based on R-squared, the systematic patt
 
 ```{python}
 #| label: bivariate-time-regression
-#| echo: true
+#| echo: false
 import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -375,7 +375,7 @@ print(model_sm_time.summary())
 
 ```{python}
 #| label: compare-time-true-relationship
-#| echo: true
+#| echo: false
 # Compare estimated coefficients to true relationship
 print("=" * 60)
 print("Comparison with True Relationship")
@@ -444,7 +444,7 @@ This is exactly the kind of misleading result that can occur in real-world resea
 ```{python}
 #| label: fig-time-anxiety-scatter
 #| fig-cap: "Scatter plot of Anxiety vs Time with regression line"
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -486,7 +486,7 @@ plt.show()
 
 ```{python}
 #| label: analyze-residuals-time
-#| echo: true
+#| echo: false
 import pandas as pd
 
 # Analyze residuals to check for patterns
@@ -512,7 +512,7 @@ print("      indicating that Stress is an important omitted variable.")
 
 ```{python}
 #| label: visualize-omitted-variable-bias
-#| echo: true
+#| echo: false
 # Create a visualization showing how Stress varies with Time
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
@@ -593,7 +593,7 @@ This example underscores the critical importance of including all relevant varia
 
 ```{python}
 #| label: multiple-regression-stresssurvey-time
-#| echo: true
+#| echo: false
 import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -627,7 +627,7 @@ print(model_sm_multiple.summary())
 
 ```{python}
 #| label: compare-multiple-true-relationship
-#| echo: true
+#| echo: false
 # Compare estimated coefficients to true relationship
 print("=" * 60)
 print("Comparison with True Relationship")
@@ -743,7 +743,7 @@ The fact that the Time coefficient has the wrong sign is a red flag that should 
 
 ```{python}
 #| label: multiple-regression-stress-time
-#| echo: true
+#| echo: false
 import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -777,7 +777,7 @@ print(model_sm_stress_time.summary())
 
 ```{python}
 #| label: compare-stress-time-true-relationship
-#| echo: true
+#| echo: false
 # Compare estimated coefficients to true relationship
 print("=" * 60)
 print("Comparison with True Relationship")
@@ -888,7 +888,7 @@ The contrast between these two models—one using a proxy variable and one using
 
 ```{python}
 #| label: model-comparison-table
-#| echo: true
+#| echo: false
 import pandas as pd
 import numpy as np
 
@@ -923,7 +923,7 @@ print()
 
 ```{python}
 #| label: statistical-significance-comparison
-#| echo: true
+#| echo: false
 # Get p-values and statistical significance from statsmodels outputs
 print("=" * 80)
 print("STATISTICAL SIGNIFICANCE COMPARISON")
@@ -972,7 +972,7 @@ print("\n" + "=" * 80)
 
 ```{python}
 #| label: coefficient-interpretation-comparison
-#| echo: true
+#| echo: false
 print("=" * 80)
 print("COEFFICIENT INTERPRETATION COMPARISON")
 print("=" * 80)
@@ -1017,7 +1017,7 @@ print("\n" + "=" * 80)
 
 ```{python}
 #| label: r-squared-comparison
-#| echo: true
+#| echo: false
 print("=" * 80)
 print("R-SQUARED COMPARISON")
 print("=" * 80)
@@ -1159,7 +1159,7 @@ This is especially critical in real-world research where we often don't know the
 
 ```{python}
 #| label: headline-comparison
-#| echo: true
+#| echo: false
 print("=" * 80)
 print("HYPOTHETICAL NEWS HEADLINES")
 print("=" * 80)
@@ -1313,7 +1313,7 @@ This is why the proxy variable problem in regression analysis is not just an aca
 ```{python}
 #| label: graphical-diagnostics-linearity
 #| fig-cap: "Graphical diagnostics: Examining the relationship between StressSurvey and Stress to identify linear regions"
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -1403,7 +1403,7 @@ print("   recover the true relationship more accurately.")
 
 ```{python}
 #| label: subset-regression-analysis
-#| echo: true
+#| echo: false
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -1461,7 +1461,7 @@ print(model_sm_subset.summary())
 
 ```{python}
 #| label: compare-subset-to-true-relationship
-#| echo: true
+#| echo: false
 
 print("=" * 80)
 print("COMPARISON: Subset Results vs True Relationship")
@@ -1536,7 +1536,7 @@ print("   - R² = 1.000 (perfect fit within this subset)")
 ```{python}
 #| label: visualization-subset-results
 #| fig-cap: "Comparison of regression results: Full data vs Low stress subset"
-#| echo: true
+#| echo: false
 
 fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
